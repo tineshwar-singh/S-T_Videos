@@ -10,6 +10,8 @@ search.addEventListener("keyup", (e) => {
 // if you needed async callbacks start with async keyword
 async function SearchMovies(searchKey) {
     let BASE_URL = `https://www.omdbapi.com/?s=${searchKey}&apikey=${key}`; 
+    
+    let NoMoviePoster = 'https://raw.githubusercontent.com/tineshwar-singh/SnT_movies/main/images/download.png';
 
     // alternative solution of then & catch => es6
     // res7 feature called async and await
@@ -21,7 +23,7 @@ async function SearchMovies(searchKey) {
         let output = [];
 
         for (let movie of movies.Search) {
-            let setDefaultPoster = movie.Poster === "N/A" ? "../images/download.png" : movie.Poster;
+            let setDefaultPoster = movie.Poster === "N/A" ? "NoMoviePoster" : movie.Poster;
 
             output += `
                 <div class="custom_card">
