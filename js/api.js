@@ -1,21 +1,11 @@
 /*----- Movie Search -----*/
 let key = "915f760d";
-
 let search = document.getElementById("search");
-// let searchIcon = document.getElementById("search-icon");
 
 search.addEventListener("keyup", (e) => {
-    if (e.keyCode === 13) {
-        var searchKey = e.target.value;
-        SearchMovies(searchKey);
-    }
+    var searchKey = e.target.value;
+    SearchMovies(searchKey);
 });
-
-// searchIcon.addEventListener("click", (e) => {
-//     var searchKey = e.target.value;
-//     console.log(searchKey)
-//     SearchMovies(searchKey);
-// });
 
 // if you needed async callbacks start with async keyword
 async function SearchMovies(searchKey) {
