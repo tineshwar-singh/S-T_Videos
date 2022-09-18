@@ -9,7 +9,7 @@ search.addEventListener("keyup", (e) => {
 
 // if you needed async callbacks start with async keyword
 async function SearchMovies(searchKey) {
-    let BASE_URL = `http://www.omdbapi.com/?s=${searchKey}&apikey=${key}`; 
+    let BASE_URL = `https://www.omdbapi.com/?s=${searchKey}&apikey=${key}`; 
 
     // alternative solution of then & catch => es6
     // res7 feature called async and await
