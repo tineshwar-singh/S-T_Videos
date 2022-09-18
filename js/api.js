@@ -23,7 +23,7 @@ async function SearchMovies(searchKey) {
         let output = [];
 
         for (let movie of movies.Search) {
-            let setDefaultPoster = movie.Poster === "N/A" ? "NoMoviePoster" : movie.Poster;
+            let setDefaultPoster = movie.Poster === "N/A" ? NoMoviePoster : movie.Poster;
 
             output += `
                 <div class="custom_card">
